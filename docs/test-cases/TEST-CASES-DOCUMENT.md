@@ -101,7 +101,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC002_duplicate_email.png |
+| | [] Pass [x] Fail | TC002_duplicate_email.png |
 
 ---
 
