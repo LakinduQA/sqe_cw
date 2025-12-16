@@ -14,11 +14,11 @@
 | --------- | ----- | ----- | ------ |
 | Critical  | 0     | 0     | 0      |
 | High      | 0     | 0     | 0      |
-| Medium    | 0     | 0     | 0      |
+| Medium    | 1     | 1     | 0      |
 | Low       | 0     | 0     | 0      |
-| **Total** | **0** | **0** | **0**  |
+| **Total** | **1** | **1** | **0**  |
 
-**Note:** All 30 automated tests passed with no defects found during automation testing.
+**Note:** 1 defect found during manual testing.
 
 ---
 
@@ -35,45 +35,43 @@
 
 ## Defect Log
 
-_No defects found during automated testing._
+### DEF-001: No Error Message When Adding Negative Quantity to Cart
 
----
-
-## Defect Template (For Future Use)
-
-### DEF-XXX: [Defect Title]
-
-| Field           | Details                                  |
-| --------------- | ---------------------------------------- |
-| **Defect ID**   | DEF-XXX                                  |
-| **Related TC**  | TC0XX                                    |
-| **Summary**     | [Brief description of the defect]        |
-| **Severity**    | Critical / High / Medium / Low           |
-| **Priority**    | P1-Urgent / P2-High / P3-Medium / P4-Low |
-| **Status**      | New / Open / Fixed / Closed / Rejected   |
-| **Reported By** | Lakindu De Silva                         |
-| **Date Found**  | December 15, 2025                        |
-| **Module**      | [Module name]                            |
-| **Browser**     | Chrome [version]                         |
-| **Environment** | https://demowebshop.tricentis.com/       |
+| Field           | Details                                                               |
+| --------------- | --------------------------------------------------------------------- |
+| **Defect ID**   | DEF-001                                                               |
+| **Related TC**  | TC034                                                                 |
+| **Summary**     | No validation error displayed when entering negative quantity in cart |
+| **Severity**    | Medium                                                                |
+| **Priority**    | P3-Medium                                                             |
+| **Status**      | Open                                                                  |
+| **Reported By** | Lakindu De Silva                                                      |
+| **Date Found**  | December 16, 2025                                                     |
+| **Module**      | Shopping Cart                                                         |
+| **Browser**     | Chrome                                                                |
+| **Environment** | https://demowebshop.tricentis.com/                                    |
 
 **Steps to Reproduce:**
 
-1. Step 1
-2. Step 2
-3. Step 3
+1. Navigate to https://demowebshop.tricentis.com/
+2. Add any product to cart
+3. Go to Shopping Cart page
+4. Change quantity to a negative number (e.g., -1)
+5. Click "Update shopping cart" button
 
 **Expected Result:**
 
-- What should happen
+- An error message should be displayed indicating that negative quantity is not allowed
+- The quantity should not be updated to a negative value
 
 **Actual Result:**
 
-- What actually happened
+- No error message is displayed
+- The system silently accepts the invalid input or behaves unexpectedly
 
 **Evidence:**
 
-- Screenshot: `DEF-XXX_screenshot.png`
+- Screenshot: `DEF-001_negative_quantity_no_error.png`
 
 ---
 
@@ -85,15 +83,15 @@ _No defects found during automated testing._
 | ---------------- | -------- | ----- | ------ | ----- | ----- |
 | User Management  | 0        | 0     | 0      | 0     | 0     |
 | Product Browsing | 0        | 0     | 0      | 0     | 0     |
-| Shopping Cart    | 0        | 0     | 0      | 0     | 0     |
+| Shopping Cart    | 0        | 0     | 1      | 0     | 1     |
 | Checkout         | 0        | 0     | 0      | 0     | 0     |
 | UI/UX            | 0        | 0     | 0      | 0     | 0     |
-| **Total**        | **0**    | **0** | **0**  | **0** | **0** |
+| **Total**        | **0**    | **0** | **1**  | **0** | **1** |
 
 ---
 
 ## Sign-Off
 
-| Role        | Name             | Signature    | Date       |
-| ----------- | ---------------- | ------------ | ---------- |
-| QA Engineer | Lakindu De Silva | ****\_\_**** | 12/15/2025 |
+| Role        | Name             | Signature        | Date       |
+| ----------- | ---------------- | ---------------- | ---------- |
+| QA Engineer | Lakindu De Silva | \***\*\_\_\*\*** | 12/15/2025 |
