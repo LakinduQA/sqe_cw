@@ -3,8 +3,8 @@
 ## Tricentis Demo Web Shop
 
 **Document Version:** 1.0  
-**Prepared By:** Lakindu De Silva  
-**Date:** December 15, 2025
+**Prepared By:** Senithi Mathangaweera 
+**Date:** December 16, 2025
 
 ---
 
@@ -63,11 +63,13 @@
 
 - An error message should be displayed indicating that negative quantity is not allowed
 - The quantity should not be updated to a negative value
+- The product should remain in the cart with a valid quantity
 
 **Actual Result:**
 
 - No error message is displayed
-- The system silently accepts the invalid input or behaves unexpectedly
+- The product completely disappears from the cart
+- The system shows "Your Shopping Cart is empty" message instead of validating the input
 
 **Evidence:**
 
