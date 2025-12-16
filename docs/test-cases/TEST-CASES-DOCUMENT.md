@@ -640,7 +640,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC021_navigation.png |
+|Main navigation menu is accessible and intuitive. All categories are visible, clearly labeled, consistent across pages, and the active category is highlighted as expected. | ☐ Pass ☐ Fail | TC021_navigation.png |
 
 ---
 
