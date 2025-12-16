@@ -668,7 +668,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC022_breadcrumb.png |
+|The breadcrumb trail was visible and correctly displayed the path "Home / Computers / Desktops / Build your own computer".<br> All links in the trail were clickable and navigated to the correct pages. |☑ Pass ☐ Fail | TC022_breadcrumb.png |
 
 ---
 
@@ -698,7 +698,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC023_search_access.png |
+|The search box is visible in the header on the homepage, category page, product page, and cart page.<br>The placeholder text "Search store" is present, the search button is clearly visible,<br> and the search functionality works successfully from all pages. | ☑ Pass ☐ Fail | TC023_search_access.png |
 
 ---
 
@@ -727,7 +727,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC024_cart_preview.png |
+|The dropdown preview appeared successfully when hovering over the "Shopping cart" link. <br>The preview correctly displayed the product thumbnail, name, and subtotal. The "Go to cart" button was present,<br> allowing for a quick view of the cart without navigating away from the current page.| ☑ Pass ☐ Fail | TC024_cart_preview.png |
 
 ---
 
@@ -758,7 +758,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC025_error_messages.png |
+|Error messages were displayed clearly in plain language near the relevant fields.<br> Red color/icons were present to indicate errors on both the registration and login pages, <br>matching the expected criteria. | ☑ Pass ☐ Fail | TC025_error_messages.png |
 
 ---
 
@@ -787,7 +787,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC026_form_labels.png |
+|All form fields displayed visible labels as expected. Required fields were correctly marked with an asterisk (*).<br> Placeholders provided clear guidance where applicable, and all labels were positioned correctly (above or beside the fields). | ☑ Pass ☐ Fail | TC026_form_labels.png |
 
 ---
 
@@ -823,7 +823,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC027_homepage_layout.png |
+|The logo is clearly displayed in the header. The navigation menu is aligned horizontally as required.<br> Featured products are correctly displayed in a grid layout. The sidebar successfully displays the Categories, Tags, and Newsletter sections.<br> The footer contains all expected Information and Customer Service links. | ☑ Pass ☐ Fail | TC027_homepage_layout.png |
 
 ---
 
@@ -854,7 +854,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC028_product_images.png |
+|Verified that product thumbnails loaded without errors and all images were properly sized.<br> The main image was displayed larger on the detail page, multiple images were viewable where available,<br> and no broken image icons were observed. | ☑ Pass ☐ Fail | TC028_product_images.png |
 
 ---
 
@@ -883,7 +883,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC029_price_format.png |
+|Prices are consistently displayed in the correct format (XX.XX). The old price is clearly shown with a strikethrough,<br> while the new/sale price is highlighted. The currency symbol remains consistent throughout the site. | ☑ Pass ☐ Fail | TC029_price_format.png |
 
 ---
 
@@ -913,7 +913,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC030_button_states.png |
+|Buttons displayed consistent styling across the site. The "Add to cart" button showed a slight hover effect in the same green color<br>, while the "Register" and "Login" buttons displayed more distinct hover effects.<br< Visual feedback was present for all interactive states, and primary actions remained prominent. | ☑ Pass ☐ Fail | TC030_button_states.png |
 
 ---
 
@@ -943,7 +943,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC031_footer_links.png |
+|All footer links (Sitemap, Privacy Notice, Contact us, About us) were clickable and successfully navigated to their respective correct pages. <br>No broken links or 404 errors were encountered, and every destination page loaded with the appropriate content. | ☑ Pass ☐ Fail | TC031_footer_links.png |
 
 ---
 
@@ -974,7 +974,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC032_header_alignment.png |
+|The logo was correctly aligned to the left, and the top links (Register, Login, Cart, Wishlist) were aligned to the<br> right side of the header. The search box was positioned within the header area, <br>and the main navigation was properly aligned with adequate spacing between all elements. |☑ Pass ☐ Fail | TC032_header_alignment.png |
 
 ---
 
@@ -1005,7 +1005,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC033_qty_zero.png |
+|Upon changing the product quantity to 0 and updating the cart, the product was successfully removed.<br>The system subsequently displayed a message confirming that the shopping cart is empty,<br>which aligns with the expected behavior for removing items. |☑ Pass ☐ Fail | TC033_qty_zero.png |
 
 ---
 
@@ -1032,7 +1032,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC034_qty_negative.png |
+|When entering a negative quantity (-5) and clicking "Update shopping cart," the system removed the product<br> and displayed the "Shopping cart is empty" message. The system did not display an error message,<br> prevent the invalid input, or reset the quantity to a valid value as expected. | ☐ Pass ☑ Fail | TC034_qty_negative.png |
 
 ---
 
@@ -1059,7 +1059,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC035_qty_max.png |
+|Upon entering a quantity of 99999 and clicking "Update shopping cart," the system correctly enforced a limit.<br> An error message was displayed stating, "The maximum quantity allowed for purchase is 10000."<br>The quantity field was automatically adjusted to the default value of 1, preventing the invalid large entry. |☑ Pass ☐ Fail | TC035_qty_max.png |
 
 ---
 
@@ -1088,7 +1088,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC036_password_min.png |
+|When entering a 5-character password and attempting to register, the system correctly prevented the action.<br> An error message was displayed stating that the minimum password length is 6 characters,<br>which aligns with the expected validation for this boundary test. |☑ Pass ☐ Fail | TC036_password_min.png |
 
 ---
 
@@ -1120,7 +1120,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC037_empty_required.png |
+|Upon clicking the "Register" button with empty fields, the system correctly displayed error messages for all mandatory inputs.<br> The messages "First name is required", "Last name is required", "Email is required", and "Password is required"<br> were clearly visible next to their respective fields. | ☑ Pass ☐ Fail | TC037_empty_required.png |
 
 ---
 
@@ -1147,7 +1147,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC038_contact_empty.png |
+|When clicking the "Submit" button with all fields left empty, the system successfully prevented the form from being submitted<br>. Clear validation error messages were displayed for the required fields, ensuring the user is aware of the missing information. |☑ Pass ☐ Fail | TC038_contact_empty.png |
 
 ---
 
@@ -1174,7 +1174,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC039_terms_unchecked.png |
+|When clicking the "Checkout" button without checking the terms of service box, the system correctly prevented the user from proceeding.<br> A clear error message was displayed stating, "Please accept the terms of service before proceeding to the next step,"<br> which fulfills the requirement for mandatory acceptance. |☑ Pass ☐ Fail | TC039_terms_unchecked.png |
 
 ---
 
@@ -1203,7 +1203,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC040_giftcard_empty.png |
+|Upon clicking "Add to cart" with empty fields, the system validated the input and displayed the error messages:<br> "Enter valid recipient name" and "Enter valid recipient email".<br>The product was correctly prevented from being added to the cart until the required details were provided. |☑  Pass ☐ Fail | TC040_giftcard_empty.png |
 
 ---
 
