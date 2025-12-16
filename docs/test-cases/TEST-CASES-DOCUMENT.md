@@ -1071,7 +1071,7 @@
 
 | Actual Result                                                                                                                                                                                                                                                  | Status        | Evidence           |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- | ------------------ |
-| Upon changing the product quantity to 0 and updating the cart, the product was successfully removed.<br>The system subsequently displayed a message confirming that the shopping cart is empty,<br>which aligns with the expected behavior for removing items. | ☑ Pass ☐ Fail | TC033_qty_zero.png |
+| |☐ Pass ☑ Fail | TC033_qty_zero.png |
 
 ---
 
