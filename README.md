@@ -117,11 +117,14 @@ npx playwright test automation/tests/checkout.spec.js
 
 ## 📊 Test Summary
 
-| Category                 | Count | Status        |
-| ------------------------ | ----- | ------------- |
-| **Manual Test Cases**    | 40    | ✅ Documented |
-| **Automated Tests**      | 30    | ✅ 100% Pass  |
-| **Requirements Covered** | 8/8   | ✅ 100%       |
+| Category                 | Count | Status                     |
+| ------------------------ | ----- | -------------------------- |
+| **Manual Test Cases**    | 40    | ✅ 39 Pass, 1 Fail (97.5%) |
+| **Automated Tests**      | 30    | ✅ 100% Pass               |
+| **Combined Pass Rate**   | 70    | ✅ **98.6%**               |
+| **Requirements Covered** | 8/8   | ✅ 100%                    |
+| **Defects Found**        | 1     | ⚠️ Medium (DEF-001)        |
+| **Release Decision**     | -     | ✅ **GO (Conditional)**    |
 
 ### Automated Test Breakdown
 
@@ -132,21 +135,32 @@ npx playwright test automation/tests/checkout.spec.js
 | AT-003: Shopping Cart | 9     | ✅ Pass |
 | AT-004: Checkout      | 5     | ✅ Pass |
 
+### Manual Test Breakdown
+
+| Category                        | Tests | Status                     |
+| ------------------------------- | ----- | -------------------------- |
+| Functional (TC001-TC020)        | 20    | ✅ 20/20 Pass              |
+| Usability (TC021-TC026)         | 6     | ✅ 6/6 Pass                |
+| UI/UX (TC027-TC032)             | 6     | ✅ 6/6 Pass                |
+| Boundary/Negative (TC033-TC040) | 8     | ⚠️ 7/8 Pass (TC034 failed) |
+
 ---
 
 ## 📋 Key Documents
 
-| Document                                                                 | Description                               |
-| ------------------------------------------------------------------------ | ----------------------------------------- |
-| [Testing Requirements](docs/test-artifacts/01-TESTING-REQUIREMENTS.md)   | 8 testing requirements (TR-001 to TR-008) |
-| [Test Strategy](docs/test-artifacts/02-TEST-STRATEGY.md)                 | Testing approach and methodology          |
-| [Test Plan](docs/test-artifacts/03-TEST-PLAN.md)                         | Scope, schedule, and resources            |
-| [Test Cases](docs/test-cases/TEST-CASES-DOCUMENT.md)                     | 40 manual test cases                      |
-| [RTM](docs/test-artifacts/REQUIREMENTS-TRACEABILITY-MATRIX.md)           | Requirements traceability matrix          |
-| [Coverage Report](docs/reports/TEST-COVERAGE-REPORT.md)                  | Test coverage analysis                    |
-| [Execution Report](docs/reports/AUTOMATED-TEST-EXECUTION-REPORT.md)      | Automated test results                    |
-| [Execution Report PDF](docs/reports/Automated-Test-Execution-Report.pdf) | PDF version of test results               |
-| [Team Handover](docs/assignment/TEAM-HANDOVER-INSTRUCTIONS.md)           | Task assignment for team members          |
+| Document                                                                | Description                               |
+| ----------------------------------------------------------------------- | ----------------------------------------- |
+| [Testing Requirements](docs/test-artifacts/01-TESTING-REQUIREMENTS.md)  | 8 testing requirements (TR-001 to TR-008) |
+| [Test Strategy](docs/test-artifacts/02-TEST-STRATEGY.md)                | Testing approach and methodology          |
+| [Test Plan](docs/test-artifacts/03-TEST-PLAN.md)                        | Scope, schedule, and resources            |
+| [Test Cases](docs/test-cases/TEST-CASES-DOCUMENT.md)                    | 40 manual test cases (executed)           |
+| [RTM](docs/test-artifacts/REQUIREMENTS-TRACEABILITY-MATRIX.md)          | Requirements traceability matrix          |
+| [Coverage Report](docs/reports/TEST-COVERAGE-REPORT.md)                 | Test coverage analysis                    |
+| [Manual Execution Report](docs/reports/MANUAL-TEST-EXECUTION-REPORT.md) | Manual test execution results             |
+| [Automation Report](docs/reports/AUTOMATION-TEST-REPORT.md)             | Automated test results                    |
+| [Defect Report](docs/defects/DEFECT-REPORT.md)                          | Defects logged (DEF-001)                  |
+| [**Final Report**](docs/reports/FINAL-TEST-REPORT.md)                   | **Go/No-Go decision & recommendations**   |
+| [Team Handover](docs/assignment/TEAM-HANDOVER-INSTRUCTIONS.md)          | Task assignment for team members          |
 
 ---
 
