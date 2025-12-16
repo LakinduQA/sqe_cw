@@ -579,7 +579,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC019_discount_code.png |
+| | ☑ Pass ☐ Fail | TC019_discount_code.png |
 
 ---
 
@@ -607,7 +607,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC020_checkout.png |
+| | ☑ Pass ☐ Fail | TC020_checkout.png |
 
 ---
 
