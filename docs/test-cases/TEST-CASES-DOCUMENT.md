@@ -69,7 +69,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC001_registration.png |
+| |  Pass ☑ Fail | TC001_registration.png |
 
 ---
 
@@ -131,7 +131,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC003_invalid_email.png |
+| | ☑ Pass ☐ Fail | TC003_invalid_email.png |
 
 ---
 
@@ -161,7 +161,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC004_password_mismatch.png |
+| | ☑ Pass ☐ Fail | TC004_password_mismatch.png |
 
 ---
 
@@ -189,7 +189,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC005_login_success.png |
+| | ☑ Pass ☐ Fail | TC005_login_success.png |
 
 ---
 
@@ -217,7 +217,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC006_login_fail.png |
+| | ☑ Pass ☐ Fail | TC006_login_fail.png |
 
 ---
 
@@ -244,7 +244,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC007_empty_login.png |
+| | ☑ Pass ☐ Fail | TC007_empty_login.png |
 
 ---
 
@@ -271,7 +271,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC008_logout.png |
+| | ☑ Pass ☐ Fail | TC008_logout.png |
 
 ---
 
@@ -298,7 +298,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC009_search_laptop.png |
+| | ☑ Pass ☐ Fail | TC009_search_laptop.png |
 
 ---
 
@@ -325,7 +325,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC010_search_no_results.png |
+| | ☑ Pass ☐ Fail | TC010_search_no_results.png |
 
 ---
 
@@ -353,7 +353,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC011_browse_books.png |
+| | ☑ Pass ☐ Fail | TC011_browse_books.png |
 
 ---
 
@@ -370,7 +370,7 @@
 
 **Test Steps:**
 1. Navigate to https://demowebshop.tricentis.com/books
-2. Click on "Under 25.00" price filter in sidebar
+2. Click on "Under $25.00" price filter in sidebar
 3. Observe filtered results
 
 **Expected Result:**
@@ -380,7 +380,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC012_price_filter.png |
+| | ☑ Pass ☐ Fail | TC012_price_filter.png |
 
 ---
 
@@ -407,7 +407,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC013_sort_price.png |
+| | ☑ Pass ☐ Fail | TC013_sort_price.png |
 
 ---
 
@@ -436,7 +436,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC014_product_detail.png |
+| | ☑ Pass ☐ Fail | TC014_product_detail.png |
 
 ---
 
@@ -464,7 +464,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC015_add_simple_product.png |
+| | ☑ Pass ☐ Fail | TC015_add_simple_product.png |
 
 ---
 
@@ -496,7 +496,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC016_add_configurable.png |
+| | ☑ Pass ☐ Fail | TC016_add_configurable.png |
 
 ---
 
@@ -524,7 +524,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC017_update_qty.png |
+| | ☑ Pass ☐ Fail | TC017_update_qty.png |
 
 ---
 
@@ -551,7 +551,7 @@
 
 | Actual Result | Status | Evidence |
 |---------------|--------|----------|
-| | ☐ Pass ☐ Fail | TC018_remove_product.png |
+| | ☑ Pass ☐ Fail | TC018_remove_product.png |
 
 ---
 
