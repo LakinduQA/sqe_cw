@@ -33,13 +33,14 @@ SQE_CW/
 │   │   └── checkout.spec.js        # AT-004: Checkout tests (5)
 │   ├── 📁 test-data/               # Test data generators
 │   │   └── testData.js
+│   ├── 📁 reports/                 # HTML test reports
 │   └── 📁 test-results/            # Test execution artifacts
 │
 ├── 📁 docs/                        # All documentation
 │   ├── 📁 assignment/              # Original assignment files
 │   │   ├── assignment.md
 │   │   ├── HNDIS25.1F - SQE -Course work (Group).pdf
-│   │   └── TEAM-HANDOVER-INSTRUCTIONS.md  # Task assignment for team
+│   │   └── TEAM-HANDOVER-INSTRUCTIONS.md
 │   │
 │   ├── 📁 overviews/               # Project planning & overviews
 │   │   ├── 3-PHASE-PLAN.md
@@ -50,22 +51,39 @@ SQE_CW/
 │   │   ├── 01-TESTING-REQUIREMENTS.md   # TR-001 to TR-008
 │   │   ├── 02-TEST-STRATEGY.md          # Testing approach
 │   │   ├── 03-TEST-PLAN.md              # Test schedule & scope
-│   │   └── REQUIREMENTS-TRACEABILITY-MATRIX.md  # RTM
+│   │   └── REQUIREMENTS-TRACEABILITY-MATRIX.md
 │   │
 │   ├── 📁 test-cases/              # Manual test cases
 │   │   └── TEST-CASES-DOCUMENT.md  # 40 test cases (TC001-TC040)
 │   │
 │   ├── 📁 defects/                 # Defect tracking
-│   │   └── DEFECT-REPORT.md
+│   │   ├── DEFECT-REPORT.md        # DEF-001 to DEF-004
+│   │   └── 📁 evidence/            # Defect screenshots & videos
+│   │
+│   ├── 📁 exploratory-testing/     # Exploratory testing session
+│   │   └── EXPLORATORY-TEST-CHARTER.md
 │   │
 │   ├── 📁 screenshots/             # Test execution screenshots
+│   │   ├── 📁 functional/          # TC001-TC020
+│   │   ├── 📁 usability/           # TC021-TC026
+│   │   ├── 📁 ui-ux/               # TC027-TC032
+│   │   └── 📁 boundary-negative/   # TC033-TC040
 │   │
-│   └── 📁 reports/                 # Test reports & evidence
+│   ├── 📁 presentation/            # Viva preparation materials
+│   │   ├── PROJECT-OVERVIEW.md
+│   │   ├── SLIDES-CONTENT.md
+│   │   ├── PRESENTATION-SCRIPT.md
+│   │   └── VIVA-QUESTIONS.md
+│   │
+│   └── 📁 reports/                 # Test reports
+│       ├── FINAL-TEST-REPORT.md    # Go/No-Go decision
 │       ├── AUTOMATED-TEST-EXECUTION-REPORT.md
-│       ├── Automated-Test-Execution-Report.pdf
+│       ├── MANUAL-TEST-EXECUTION-REPORT.md
 │       ├── TEST-COVERAGE-REPORT.md
-│       ├── playwright-html-report/  # Interactive HTML report
-│       └── playwright-html-report.png
+│       └── playwright-html-report/
+│
+├── 📁 .github/workflows/           # CI/CD pipeline
+│   └── playwright.yml
 │
 └── 📁 node_modules/                # Dependencies (auto-generated)
 ```
@@ -123,7 +141,7 @@ npx playwright test automation/tests/checkout.spec.js
 | **Automated Tests**      | 30    | ✅ 100% Pass               |
 | **Combined Pass Rate**   | 70    | ✅ **98.6%**               |
 | **Requirements Covered** | 8/8   | ✅ 100%                    |
-| **Defects Found**        | 1     | ⚠️ Medium (DEF-001)        |
+| **Defects Found**        | 4     | ⚠️ 1 High, 3 Medium        |
 | **Release Decision**     | -     | ✅ **GO (Conditional)**    |
 
 ### Automated Test Breakdown
@@ -148,19 +166,20 @@ npx playwright test automation/tests/checkout.spec.js
 
 ## 📋 Key Documents
 
-| Document                                                                | Description                               |
-| ----------------------------------------------------------------------- | ----------------------------------------- |
-| [Testing Requirements](docs/test-artifacts/01-TESTING-REQUIREMENTS.md)  | 8 testing requirements (TR-001 to TR-008) |
-| [Test Strategy](docs/test-artifacts/02-TEST-STRATEGY.md)                | Testing approach and methodology          |
-| [Test Plan](docs/test-artifacts/03-TEST-PLAN.md)                        | Scope, schedule, and resources            |
-| [Test Cases](docs/test-cases/TEST-CASES-DOCUMENT.md)                    | 40 manual test cases (executed)           |
-| [RTM](docs/test-artifacts/REQUIREMENTS-TRACEABILITY-MATRIX.md)          | Requirements traceability matrix          |
-| [Coverage Report](docs/reports/TEST-COVERAGE-REPORT.md)                 | Test coverage analysis                    |
-| [Manual Execution Report](docs/reports/MANUAL-TEST-EXECUTION-REPORT.md) | Manual test execution results             |
-| [Automation Report](docs/reports/AUTOMATION-TEST-REPORT.md)             | Automated test results                    |
-| [Defect Report](docs/defects/DEFECT-REPORT.md)                          | Defects logged (DEF-001)                  |
-| [**Final Report**](docs/reports/FINAL-TEST-REPORT.md)                   | **Go/No-Go decision & recommendations**   |
-| [Team Handover](docs/assignment/TEAM-HANDOVER-INSTRUCTIONS.md)          | Task assignment for team members          |
+| Document                                                                         | Description                               |
+| -------------------------------------------------------------------------------- | ----------------------------------------- |
+| [Testing Requirements](docs/test-artifacts/01-TESTING-REQUIREMENTS.md)           | 8 testing requirements (TR-001 to TR-008) |
+| [Test Strategy](docs/test-artifacts/02-TEST-STRATEGY.md)                         | Testing approach and methodology          |
+| [Test Plan](docs/test-artifacts/03-TEST-PLAN.md)                                 | Scope, schedule, and resources            |
+| [Test Cases](docs/test-cases/TEST-CASES-DOCUMENT.md)                             | 40 manual test cases (executed)           |
+| [RTM](docs/test-artifacts/REQUIREMENTS-TRACEABILITY-MATRIX.md)                   | Requirements traceability matrix          |
+| [Coverage Report](docs/reports/TEST-COVERAGE-REPORT.md)                          | Test coverage analysis                    |
+| [Manual Execution Report](docs/reports/MANUAL-TEST-EXECUTION-REPORT.md)          | Manual test execution results             |
+| [Automation Report](docs/reports/AUTOMATED-TEST-EXECUTION-REPORT.md)             | Automated test results                    |
+| [Defect Report](docs/defects/DEFECT-REPORT.md)                                   | Defects logged (DEF-001 to DEF-004)       |
+| [Exploratory Test Charter](docs/exploratory-testing/EXPLORATORY-TEST-CHARTER.md) | Exploratory testing session documentation |
+| [**Final Report**](docs/reports/FINAL-TEST-REPORT.md)                            | **Go/No-Go decision & recommendations**   |
+| [Team Handover](docs/assignment/TEAM-HANDOVER-INSTRUCTIONS.md)                   | Task assignment for team members          |
 
 ---
 

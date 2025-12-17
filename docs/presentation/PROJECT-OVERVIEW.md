@@ -94,9 +94,9 @@ We automated **30 tests** using **Playwright** with the **Page Object Model (POM
 
 ## 🐛 Defects Found
 
-We found **1 defect** during testing:
+We found **4 defects** during testing:
 
-### DEF-001: Negative Quantity Bug
+### DEF-001: Negative Quantity Bug (Medium)
 
 | Field             | Value                                         |
 | ----------------- | --------------------------------------------- |
@@ -104,13 +104,34 @@ We found **1 defect** during testing:
 | **Severity**      | Medium                                        |
 | **What Happened** | Enter -5 quantity in cart, product disappears |
 | **Expected**      | Should show error message                     |
-| **Impact**        | Poor user experience, but doesn't break site  |
 
-**Why Medium Severity?**
+### DEF-002: Books Search Returns No Products (Medium)
 
-- Not Critical: Website still works
-- Not Low: It's unexpected behavior
-- Medium: Should be fixed, but not blocking
+| Field             | Value                                    |
+| ----------------- | ---------------------------------------- |
+| **Test Case**     | ETC01 (Exploratory Testing)              |
+| **Severity**      | Medium                                   |
+| **What Happened** | Searching for "Books" shows no results   |
+| **Expected**      | Should show products from Books category |
+
+### DEF-003: Missing Add to Cart on Listing (Medium)
+
+| Field             | Value                                           |
+| ----------------- | ----------------------------------------------- |
+| **Test Case**     | ETC02 (Exploratory Testing)                     |
+| **Severity**      | Medium                                          |
+| **What Happened** | Some Electronics products have no "Add to Cart" |
+| **Expected**      | All products should have add to cart option     |
+
+### DEF-004: Missing Add to Cart on Product Page (High)
+
+| Field             | Value                                           |
+| ----------------- | ----------------------------------------------- |
+| **Test Case**     | ETC03 (Exploratory Testing)                     |
+| **Severity**      | High                                            |
+| **What Happened** | Product detail page has no "Add to Cart" button |
+| **Expected**      | Users should be able to purchase the product    |
+| **Impact**        | Product completely unpurchasable                |
 
 ---
 
@@ -120,7 +141,7 @@ We found **1 defect** during testing:
 | ----------------------- | ----- | -------------------------------- |
 | **Test Coverage**       | 100%  | All 8 requirements tested        |
 | **Pass Rate**           | 98.6% | Very high quality                |
-| **Defect Density**      | 0.025 | Very low (1 defect per 40 tests) |
+| **Defect Density**      | 0.10  | Low (4 defects from testing)     |
 | **Automation Coverage** | 75%   | 30 of 40 key scenarios automated |
 
 ---
@@ -129,16 +150,17 @@ We found **1 defect** during testing:
 
 ### Why GO?
 
-1. No Critical or High severity bugs
+1. No Critical severity bugs
 2. 98.6% pass rate (above 95% threshold)
-3. All core features work correctly
-4. The 1 bug doesn't block users from shopping
+3. Core features work correctly for most products
+4. The High severity bug affects limited products only
 
 ### Conditions
 
-1. Log DEF-001 for future fix
-2. Document as known issue
-3. Monitor for user complaints
+1. Prioritize DEF-004 (High) for next sprint
+2. Log all 4 defects in backlog
+3. Document as known issues
+4. Monitor for user complaints
 
 ---
 
@@ -180,4 +202,4 @@ We found **1 defect** during testing:
 
 ## Simple Summary
 
-> We tested an online shopping website by creating 40 test cases and automating 30 of them. We found 1 bug where entering negative quantity removes products without warning. The website passed 98.6% of tests and is ready for release with the condition that this bug is fixed later.
+> We tested an online shopping website by creating 40 test cases and automating 30 of them. We found 4 defects (1 High, 3 Medium) including issues with search functionality and products that cannot be added to cart. The website passed 98.6% of tests and is ready for release with the condition that the High severity bug is prioritized for fix.

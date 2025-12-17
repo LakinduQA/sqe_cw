@@ -27,14 +27,14 @@
 
 ### 2. Test Automation (Phase 2) - 100% Complete
 
-| Requirement                      | Deliverable                                                    | Status  |
-| -------------------------------- | -------------------------------------------------------------- | ------- |
-| Choose 3-5 critical test cases   | 4 test suites (30 automated tests)                             | ✅ Done |
-| Use automation tool (Playwright) | Playwright with Page Object Model                              | ✅ Done |
-| Implement automation scripts     | 4 spec files created                                           | ✅ Done |
-| Execute automated tests          | 30/30 tests passing (100%)                                     | ✅ Done |
-| Capture execution results        | HTML report generated                                          | ✅ Done |
-| Automation report                | [AUTOMATION-TEST-REPORT.md](docs/overviews/PROGRESS-REPORT.md) | ✅ Done |
+| Requirement                      | Deliverable                                                                           | Status  |
+| -------------------------------- | ------------------------------------------------------------------------------------- | ------- |
+| Choose 3-5 critical test cases   | 4 test suites (30 automated tests)                                                    | ✅ Done |
+| Use automation tool (Playwright) | Playwright with Page Object Model                                                     | ✅ Done |
+| Implement automation scripts     | 4 spec files created                                                                  | ✅ Done |
+| Execute automated tests          | 30/30 tests passing (100%)                                                            | ✅ Done |
+| Capture execution results        | HTML report generated                                                                 | ✅ Done |
+| Automation report                | [AUTOMATED-TEST-EXECUTION-REPORT.md](docs/reports/AUTOMATED-TEST-EXECUTION-REPORT.md) | ✅ Done |
 
 ### 3. Test Cases Created - 40 Test Cases ✅
 
@@ -61,12 +61,12 @@
 
 ### 2. Defect Logging - 100% Complete ✅
 
-| Task                         | Description                  | Status            |
-| ---------------------------- | ---------------------------- | ----------------- |
-| Log defects for failed tests | Create defect entries        | ✅ Done (DEF-001) |
-| Include all required fields  | ID, Summary, Steps, Severity | ✅ Done           |
-| Link to test cases           | Reference TC IDs             | ✅ Done (TC034)   |
-| Add screenshots as evidence  | Attach supporting evidence   | ✅ Done           |
+| Task                         | Description                  | Status                               |
+| ---------------------------- | ---------------------------- | ------------------------------------ |
+| Log defects for failed tests | Create defect entries        | ✅ Done (DEF-001 to DEF-004)         |
+| Include all required fields  | ID, Summary, Steps, Severity | ✅ Done                              |
+| Link to test cases           | Reference TC IDs             | ✅ Done (TC034, ETC01, ETC02, ETC03) |
+| Add screenshots as evidence  | Attach supporting evidence   | ✅ Done                              |
 
 ### 3. Final Report & Decision Making - 100% Complete ✅
 
@@ -101,7 +101,7 @@ Sqe_cw/
 │   ├── test-cases/
 │   │   └── TEST-CASES-DOCUMENT.md         ✅ (40 test cases - EXECUTED)
 │   ├── defects/
-│   │   └── DEFECT-REPORT.md               ✅ (1 defect logged - DEF-001)
+│   │   └── DEFECT-REPORT.md               ✅ (4 defects logged - DEF-001 to DEF-004)
 │   ├── reports/
 │   │   ├── TEST-COVERAGE-REPORT.md        ✅
 │   │   ├── AUTOMATION-TEST-REPORT.md      ✅
@@ -164,7 +164,7 @@ Sqe_cw/
 | Passed                | 69                            |
 | Failed                | 1                             |
 | **Overall Pass Rate** | **98.6%**                     |
-| Defects Found         | 1 (Medium severity)           |
+| Defects Found         | 4 (1 High, 3 Medium)          |
 | **Release Decision**  | **GO (Conditional)**          |
 
 ---

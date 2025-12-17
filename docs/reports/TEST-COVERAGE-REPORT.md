@@ -106,12 +106,13 @@ Browser: Chromium
 | Module           | Test Cases | Defects Found | Defect Density |
 | ---------------- | ---------- | ------------- | -------------- |
 | User Management  | 8          | 0             | 0.00           |
-| Product Browsing | 4          | 0             | 0.00           |
+| Product Search   | 2          | 1             | 0.50           |
+| Product Browsing | 4          | 2             | 0.50           |
 | Shopping Cart    | 7          | 1             | 0.14           |
 | Checkout         | 2          | 0             | 0.00           |
 | UI/UX            | 12         | 0             | 0.00           |
-| Forms/Validation | 7          | 0             | 0.00           |
-| **Total**        | **40**     | **1**         | **0.025**      |
+| Forms/Validation | 5          | 0             | 0.00           |
+| **Total**        | **40**     | **4**         | **0.10**       |
 
 ---
 
@@ -150,6 +151,9 @@ All **40 manual test cases** have been executed with a **97.5% pass rate**:
 ### Defects Found
 
 - **DEF-001** (Medium): No error message when entering negative quantity - product disappears from cart
+- **DEF-002** (Medium): Search by category name "Books" returns no products
+- **DEF-003** (Medium): Electronics products missing "Add to Cart" button on listing page
+- **DEF-004** (High): Product detail page missing "Add to Cart" button for certain items
 
 ### Overall Results
 
@@ -157,18 +161,18 @@ All **40 manual test cases** have been executed with a **97.5% pass rate**:
 | ------------------ | -------------------- |
 | Combined Tests     | 70                   |
 | Combined Pass Rate | **98.6%**            |
-| Defects            | 1 Medium             |
+| Defects            | 4 (1 High, 3 Medium) |
 | Release Decision   | **GO (Conditional)** |
 
 ---
 
 ## Sign-Off
 
-| Role          | Name                  | Signature    | Date       |
-| ------------- | --------------------- | ------------ | ---------- |
-| QA Lead       | Lakindu De Silva      | ****\_\_**** | 12/16/2025 |
-| Test Executor | Chamath Madurasinghe  | ****\_\_**** | 12/16/2025 |
-| Test Executor | Senithi Mathangaweera | ****\_\_**** | 12/16/2025 |
+| Role          | Name                  | Signature        | Date       |
+| ------------- | --------------------- | ---------------- | ---------- |
+| QA Lead       | Lakindu De Silva      | \***\*\_\_\*\*** | 12/16/2025 |
+| Test Executor | Chamath Madurasinghe  | \***\*\_\_\*\*** | 12/16/2025 |
+| Test Executor | Senithi Mathangaweera | \***\*\_\_\*\*** | 12/16/2025 |
 
 ---
 

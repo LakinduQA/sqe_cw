@@ -206,22 +206,40 @@
 > | **Medium**   | Feature partially works, minor impact   | No error for invalid input |
 > | **Low**      | Cosmetic issue, no functional impact    | Typo in text               |
 >
-> Our defect (DEF-001) was **Medium** because the cart still works, but the error handling is poor.
+> Our defects ranged from **Medium** to **High**:
+>
+> - DEF-001 to DEF-003 were **Medium** (cart works, but error handling/search issues)
+> - DEF-004 was **High** (some products cannot be purchased at all)
 
 ---
 
-### Q13: Explain the defect you found
+### Q13: Explain the defects you found
 
 **Answer:**
 
-> **DEF-001: Negative Quantity Bug**
+> We found **4 defects** (1 from manual testing, 3 from exploratory testing):
+>
+> **DEF-001: Negative Quantity Bug** (Medium)
 >
 > - **Test Case**: TC034 - Add negative quantity to cart
-> - **Steps**: Add product → Change quantity to -5 → Update cart
-> - **Expected**: Error message "Invalid quantity"
 > - **Actual**: Product silently removed, cart shows empty
-> - **Severity**: Medium
-> - **Impact**: Poor UX, but doesn't prevent shopping
+> - **Expected**: Error message "Invalid quantity"
+>
+> **DEF-002: Books Search Returns No Products** (Medium)
+>
+> - **Test Case**: ETC01 - Search for "Books" keyword
+> - **Actual**: No products found despite Books category existing
+>
+> **DEF-003: Missing Add to Cart on Listing** (Medium)
+>
+> - **Test Case**: ETC02 - Browse Electronics category
+> - **Actual**: Some products have no "Add to Cart" button
+>
+> **DEF-004: Missing Add to Cart on Product Page** (High)
+>
+> - **Test Case**: ETC03 - View product detail page
+> - **Actual**: No way to purchase the product
+> - **Impact**: Product completely unpurchasable
 
 ---
 
@@ -251,7 +269,7 @@
 > | Metric                    | Value | Meaning                       |
 > | ------------------------- | ----- | ----------------------------- |
 > | **Pass Rate**             | 98.6% | High quality                  |
-> | **Defect Density**        | 0.025 | 1 defect per 40 tests         |
+> | **Defect Density**        | 0.10  | 4 defects from all testing    |
 > | **Requirements Coverage** | 100%  | All requirements tested       |
 > | **Automation Coverage**   | 75%   | 30 of key scenarios automated |
 
@@ -297,15 +315,16 @@
 
 > We recommended **GO (Conditional)** because:
 >
-> 1. **No Critical/High defects** - Nothing blocks users
+> 1. **No Critical defects** - Nothing crashes the site
 > 2. **98.6% pass rate** - Above 95% threshold
-> 3. **Core functions work** - Users can shop successfully
-> 4. **Medium defect is minor** - Poor UX but not blocking
+> 3. **Core functions work** - Most users can shop successfully
+> 4. **High defect affects limited products** - Only some Electronics affected
 >
 > **Conditions:**
 >
-> - Document DEF-001 as known issue
-> - Fix in next sprint
+> - Prioritize DEF-004 (High) for next sprint
+> - Log all 4 defects as known issues
+> - Monitor user feedback
 
 ---
 

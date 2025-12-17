@@ -13,14 +13,14 @@
 
 Manual testing of the Tricentis Demo Web Shop has been completed. A total of **40 test cases** were executed across 4 categories. The overall pass rate is **97.5%** with 1 defect identified.
 
-| Metric           | Value     |
-| ---------------- | --------- |
-| Total Test Cases | 40        |
-| Passed           | 39        |
-| Failed           | 1         |
-| Blocked          | 0         |
-| Pass Rate        | **97.5%** |
-| Defects Found    | 1         |
+| Metric           | Value                                         |
+| ---------------- | --------------------------------------------- |
+| Total Test Cases | 40                                            |
+| Passed           | 39                                            |
+| Failed           | 1                                             |
+| Blocked          | 0                                             |
+| Pass Rate        | **97.5%**                                     |
+| Defects Found    | 4 (1 from manual, 3 from exploratory testing) |
 
 ---
 
@@ -115,6 +115,16 @@ Manual testing of the Tricentis Demo Web Shop has been completed. A total of **4
 | Defect ID | Related TC | Summary                                                                         | Severity | Status |
 | --------- | ---------- | ------------------------------------------------------------------------------- | -------- | ------ |
 | DEF-001   | TC034      | No error message when entering negative quantity - product disappears from cart | Medium   | Open   |
+
+**Additional Defects from Exploratory Testing:**
+
+| Defect ID | Related TC | Summary                                                    | Severity | Status |
+| --------- | ---------- | ---------------------------------------------------------- | -------- | ------ |
+| DEF-002   | ETC01      | Search by category name "Books" returns no products        | Medium   | Open   |
+| DEF-003   | ETC02      | Electronics products missing "Add to Cart" on listing page | Medium   | Open   |
+| DEF-004   | ETC03      | Product detail page missing "Add to Cart" button           | High     | Open   |
+
+**Total Defects: 4** (1 High, 3 Medium)
 
 ### DEF-001 Details
 

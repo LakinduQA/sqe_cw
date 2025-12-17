@@ -123,22 +123,21 @@
 
 ---
 
-# SLIDE 8: DEFECT FOUND
+# SLIDE 8: DEFECTS FOUND
 
-## DEF-001: Negative Quantity Bug
+## 4 Defects Identified
 
-**Test Case:** TC034
+| Defect ID | Summary                                      | Severity |
+| --------- | -------------------------------------------- | -------- |
+| DEF-001   | Negative quantity removes product silently   | Medium   |
+| DEF-002   | "Books" search returns no products           | Medium   |
+| DEF-003   | Some products missing Add to Cart on listing | Medium   |
+| DEF-004   | Product detail page missing Add to Cart      | High     |
 
-**Issue:**
+**Sources:**
 
-- Enter -5 quantity in cart
-- Click "Update shopping cart"
-
-**Expected:** Error message
-
-**Actual:** Product disappears silently
-
-**Severity:** Medium
+- 1 from Manual Testing (TC034)
+- 3 from Exploratory Testing (ETC01-03)
 
 ---
 
@@ -146,14 +145,14 @@
 
 ## Combined Metrics
 
-| Metric                | Value      |
-| --------------------- | ---------- |
-| Total Tests           | 70         |
-| Passed                | 69         |
-| Failed                | 1          |
-| **Pass Rate**         | **98.6%**  |
-| Requirements Coverage | 100%       |
-| Defects Found         | 1 (Medium) |
+| Metric                | Value                |
+| --------------------- | -------------------- |
+| Total Tests           | 70                   |
+| Passed                | 69                   |
+| Failed                | 1                    |
+| **Pass Rate**         | **98.6%**            |
+| Requirements Coverage | 100%                 |
+| Defects Found         | 4 (1 High, 3 Medium) |
 
 ---
 
@@ -163,15 +162,15 @@
 
 **Why GO:**
 
-- No Critical/High defects
+- No Critical defects
 - 98.6% pass rate (above 95% threshold)
-- Core functionality works
+- Core functionality works for most products
 
 **Conditions:**
 
-- Document DEF-001 as known issue
-- Schedule fix for next sprint
-- Monitor user feedback
+- Prioritize DEF-004 (High) for next sprint
+- Document all 4 defects as known issues
+- Monitor user feedback on affected products
 
 ---
 

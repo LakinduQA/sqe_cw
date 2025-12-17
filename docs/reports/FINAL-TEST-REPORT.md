@@ -80,10 +80,12 @@ The application is recommended for release with the condition that the identifie
 | Severity  | Open  | Closed | Total |
 | --------- | ----- | ------ | ----- |
 | Critical  | 0     | 0      | 0     |
-| High      | 0     | 0      | 0     |
-| Medium    | 1     | 0      | 1     |
+| High      | 1     | 0      | 1     |
+| Medium    | 3     | 0      | 3     |
 | Low       | 0     | 0      | 0     |
-| **Total** | **1** | **0**  | **1** |
+| **Total** | **4** | **0**  | **4** |
+
+**Note:** 4 defects found - 1 during manual testing, 3 during exploratory testing.
 
 ### 3.2 Defect Details
 
@@ -111,33 +113,95 @@ Implement client-side and server-side validation to reject negative quantities a
 
 ---
 
+#### DEF-002: Search by Category Name "Books" Returns No Products
+
+| Field                 | Value          |
+| --------------------- | -------------- |
+| **Severity**          | Medium         |
+| **Priority**          | P3             |
+| **Status**            | Open           |
+| **Module**            | Product Search |
+| **Related Test Case** | ETC01          |
+
+**Description:**  
+Searching for keyword "Books" returns no products despite the Books category having multiple products available.
+
+**Impact:**
+
+- Users cannot find book products using natural search terms
+- Reduces product discoverability
+
+---
+
+#### DEF-003: Electronics Products Missing "Add to Cart" Button on Listing Page
+
+| Field                 | Value            |
+| --------------------- | ---------------- |
+| **Severity**          | Medium           |
+| **Priority**          | P3               |
+| **Status**            | Open             |
+| **Module**            | Product Browsing |
+| **Related Test Case** | ETC02            |
+
+**Description:**  
+Some electronics products cannot be added to cart directly from the category listing page - no "Add to cart" button visible.
+
+**Impact:**
+
+- Users cannot quickly add products to cart
+- Reduced conversion rate for affected products
+
+---
+
+#### DEF-004: Product Detail Page Missing "Add to Cart" Button
+
+| Field                 | Value            |
+| --------------------- | ---------------- |
+| **Severity**          | High             |
+| **Priority**          | P2               |
+| **Status**            | Open             |
+| **Module**            | Product Browsing |
+| **Related Test Case** | ETC03            |
+
+**Description:**  
+Some products have no "Add to Cart" button even on the product detail page, making them completely unpurchasable.
+
+**Impact:**
+
+- **High Severity** - Product cannot be purchased at all
+- Direct revenue loss for affected products
+- No workaround available
+
+---
+
 ## 4. Release Readiness Decision
 
 ### 4.1 Go/No-Go Assessment
 
-| Criteria                      | Status  | Notes                                              |
-| ----------------------------- | ------- | -------------------------------------------------- |
-| All Critical defects resolved | ✅ Pass | No critical defects                                |
-| All High defects resolved     | ✅ Pass | No high defects                                    |
-| Core functionality working    | ✅ Pass | Registration, login, cart, checkout all functional |
-| Pass rate > 95%               | ✅ Pass | 98.6% combined pass rate                           |
-| All requirements covered      | ✅ Pass | 100% requirement coverage                          |
-| Automation tests passing      | ✅ Pass | 30/30 (100%)                                       |
+| Criteria                      | Status  | Notes                                                 |
+| ----------------------------- | ------- | ----------------------------------------------------- |
+| All Critical defects resolved | ✅ Pass | No critical defects                                   |
+| All High defects resolved     | ⚠️ Risk | 1 High defect (DEF-004) - some products unpurchasable |
+| Core functionality working    | ✅ Pass | Registration, login, cart, checkout all functional    |
+| Pass rate > 95%               | ✅ Pass | 98.6% combined pass rate                              |
+| All requirements covered      | ✅ Pass | 100% requirement coverage                             |
+| Automation tests passing      | ✅ Pass | 30/30 (100%)                                          |
 
 ### 4.2 Decision: ✅ **GO** (Conditional Release)
 
 **Rationale:**
 
-1. No Critical or High severity defects exist
+1. No Critical severity defects exist
 2. Overall pass rate of 98.6% exceeds the 95% threshold
-3. All core business functionality is working correctly
-4. The single Medium defect (DEF-001) does not prevent users from completing purchases
+3. Core business functionality is working correctly for most products
+4. The High defect (DEF-004) affects limited products in Electronics category only
 
 **Conditions:**
 
-1. DEF-001 should be logged in the backlog for future fix
-2. A known issues document should accompany the release
-3. Monitoring should be in place to track any related user complaints
+1. All 4 defects should be logged in the backlog for fix
+2. DEF-004 (High) should be prioritized for next sprint
+3. A known issues document should accompany the release
+4. Monitoring should be in place to track any related user complaints
 
 ---
 
@@ -148,14 +212,15 @@ Implement client-side and server-side validation to reject negative quantities a
 | Risk ID | Risk Description                                 | Likelihood | Impact | Mitigation                                        |
 | ------- | ------------------------------------------------ | ---------- | ------ | ------------------------------------------------- |
 | R-001   | Users entering negative quantity lose cart items | Low        | Medium | Document as known issue; fix in next sprint       |
-| R-002   | Edge cases in form validation may exist          | Low        | Low    | Continue exploratory testing                      |
-| R-003   | Browser compatibility not fully tested           | Medium     | Medium | Test in Firefox, Safari, Edge before wide release |
+| R-002   | Search by category name returns no results       | Medium     | Low    | Users can navigate via menu instead               |
+| R-003   | Some products cannot be added to cart            | Low        | High   | Affects specific Electronics products only        |
+| R-004   | Browser compatibility not fully tested           | Medium     | Medium | Test in Firefox, Safari, Edge before wide release |
 
 ### 5.2 Risk Assessment
 
-**Overall Risk Level: LOW**
+**Overall Risk Level: LOW-MEDIUM**
 
-The application demonstrates stable core functionality. The identified risks are manageable and do not significantly impact the user's ability to browse products, manage their cart, or complete purchases.
+The application demonstrates stable core functionality. Most products can be browsed, added to cart, and purchased. The High severity defect (DEF-004) affects a limited subset of products in the Electronics category. Overall impact is contained and does not prevent the majority of user transactions.
 
 ---
 
@@ -203,7 +268,7 @@ The application demonstrates stable core functionality. The identified risks are
 | RTM                     | docs/test-artifacts/REQUIREMENTS-TRACEABILITY-MATRIX.md | ✅ Complete |
 | Test Coverage Report    | docs/reports/TEST-COVERAGE-REPORT.md                    | ✅ Complete |
 | Manual Execution Report | docs/reports/MANUAL-TEST-EXECUTION-REPORT.md            | ✅ Complete |
-| Automation Report       | docs/reports/AUTOMATION-TEST-REPORT.md                  | ✅ Complete |
+| Automation Report       | docs/reports/AUTOMATED-TEST-EXECUTION-REPORT.md         | ✅ Complete |
 
 ### 7.2 Automation Deliverables
 
@@ -225,23 +290,21 @@ The testing of the Tricentis Demo Web Shop has been successfully completed. With
 - ✅ 100% automated test pass rate (30/30)
 - ✅ 97.5% manual test pass rate (39/40)
 - ✅ 100% requirements coverage (8/8)
-- ✅ Only 1 Medium severity defect identified
+- ⚠️ 4 defects identified (1 High, 3 Medium) across manual and exploratory testing
 - ✅ All core business flows verified
 
 ### Final Verdict:
 
-The application is **READY FOR RELEASE** with the condition that DEF-001 is acknowledged and tracked for future resolution.
+The application is **READY FOR RELEASE** with the condition that all 4 defects are acknowledged and tracked for future resolution. DEF-004 (High) should be prioritized for the next sprint.
 
 ---
 
 ## 9. Sign-Off
 
-| Role             | Name                  | Signature  | Date       |
-| ---------------- | --------------------- | ---------- | ---------- |
-| QA Lead / Author | Lakindu De Silva      | **\_\_\_** | 12/16/2025 |
-| Test Executor    | Chamath Madurasinghe  | **\_\_\_** | 12/16/2025 |
-| Test Executor    | Senithi Mathangaweera | **\_\_\_** | 12/16/2025 |
+| Role          | Name                  | Signature  | Date       |
+| ------------- | --------------------- | ---------- | ---------- |
+| QA Lead       | Lakindu De Silva      | **\_\_\_** | 12/16/2025 |
+| Test Executor | Chamath Madurasinghe  | **\_\_\_** | 12/16/2025 |
+| Test Executor | Senithi Mathangaweera | **\_\_\_** | 12/16/2025 |
 
 ---
-
-**Document End**
