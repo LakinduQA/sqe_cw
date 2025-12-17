@@ -37,16 +37,6 @@ SQE_CW/
 │   └── 📁 test-results/            # Test execution artifacts
 │
 ├── 📁 docs/                        # All documentation
-│   ├── 📁 assignment/              # Original assignment files
-│   │   ├── assignment.md
-│   │   ├── HNDIS25.1F - SQE -Course work (Group).pdf
-│   │   └── TEAM-HANDOVER-INSTRUCTIONS.md
-│   │
-│   ├── 📁 overviews/               # Project planning & overviews
-│   │   ├── 3-PHASE-PLAN.md
-│   │   ├── AUTOMATION-OVERVIEW.md
-│   │   └── PROGRESS-REPORT.md
-│   │
 │   ├── 📁 test-artifacts/          # Core testing documents
 │   │   ├── 01-TESTING-REQUIREMENTS.md   # TR-001 to TR-008
 │   │   ├── 02-TEST-STRATEGY.md          # Testing approach
@@ -68,12 +58,6 @@ SQE_CW/
 │   │   ├── 📁 usability/           # TC021-TC026
 │   │   ├── 📁 ui-ux/               # TC027-TC032
 │   │   └── 📁 boundary-negative/   # TC033-TC040
-│   │
-│   ├── 📁 presentation/            # Viva preparation materials
-│   │   ├── PROJECT-OVERVIEW.md
-│   │   ├── SLIDES-CONTENT.md
-│   │   ├── PRESENTATION-SCRIPT.md
-│   │   └── VIVA-QUESTIONS.md
 │   │
 │   └── 📁 reports/                 # Test reports
 │       ├── FINAL-TEST-REPORT.md    # Go/No-Go decision
@@ -179,7 +163,6 @@ npx playwright test automation/tests/checkout.spec.js
 | [Defect Report](docs/defects/DEFECT-REPORT.md)                                   | Defects logged (DEF-001 to DEF-004)       |
 | [Exploratory Test Charter](docs/exploratory-testing/EXPLORATORY-TEST-CHARTER.md) | Exploratory testing session documentation |
 | [**Final Report**](docs/reports/FINAL-TEST-REPORT.md)                            | **Go/No-Go decision & recommendations**   |
-| [Team Handover](docs/assignment/TEAM-HANDOVER-INSTRUCTIONS.md)                   | Task assignment for team members          |
 
 ---
 
