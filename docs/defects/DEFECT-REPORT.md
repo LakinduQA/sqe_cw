@@ -3,7 +3,7 @@
 ## Tricentis Demo Web Shop
 
 **Document Version:** 1.0  
-**Prepared By:** Senithi Mathangaweera
+**Prepared By:** Lakindu De Silva
 **Date:** December 16, 2025
 
 ---
@@ -45,7 +45,7 @@
 | **Severity**    | Medium                                                                |
 | **Priority**    | P3-Medium                                                             |
 | **Status**      | Open                                                                  |
-| **Reported By** | Lakindu De Silva                                                      |
+| **Reported By** | Senithi Mathangaweera                                                       |
 | **Date Found**  | December 16, 2025                                                     |
 | **Module**      | Shopping Cart                                                         |
 | **Browser**     | Chrome                                                                |

@@ -3,7 +3,7 @@
 ## Tricentis Demo Web Shop
 
 **Document Version:** 1.0  
-**Prepared By:** Senithi Mathangaweera  
+**Prepared By:** Lakindu De Silva 
 **Date:** December 17, 2025  
 **Session Duration:** 60 minutes
 
