@@ -5,7 +5,7 @@
 **Document Version:** 1.0  
 **Prepared By:** Lakindu De Silva  
 **Date:** December 15, 2025  
-**Project:** Software Quality Engineering Coursework
+**Project:** Tricentis DemoWebShop QA Suite
 
 ---
 
@@ -271,7 +271,7 @@ Invalid User:
 
 ## 12. Approval
 
-| Role        | Name             | Signature      | Date           |
-| ----------- | ---------------- | -------------- | -------------- |
-| QA Engineer | Lakindu De Silva | ******\_****** | ******\_****** |
-| Reviewer    | ******\_******   | ******\_****** | ******\_****** |
+| Role        | Name               | Signature          | Date               |
+| ----------- | ------------------ | ------------------ | ------------------ |
+| QA Engineer | Lakindu De Silva   | **\*\***\_**\*\*** | **\*\***\_**\*\*** |
+| Reviewer    | **\*\***\_**\*\*** | **\*\***\_**\*\*** | **\*\***\_**\*\*** |

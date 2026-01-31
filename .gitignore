@@ -4,5 +4,3 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 
-# Keep locally - don't push to repo
-_KEEP_LOCAL_DELETE_BEFORE_PUSH/

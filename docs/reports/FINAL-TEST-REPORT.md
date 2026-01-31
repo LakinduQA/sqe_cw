@@ -5,7 +5,7 @@
 **Document Version:** 1.0  
 **Prepared By:** Lakindu De Silva  
 **Date:** December 16, 2025  
-**Project:** SQE Coursework - Software Testing
+**Project:** Tricentis DemoWebShop QA Suite
 
 ---
 

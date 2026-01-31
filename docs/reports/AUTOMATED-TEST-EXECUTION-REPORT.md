@@ -2,7 +2,7 @@
 
 ## Demo Web Shop - https://demowebshop.tricentis.com/
 
-**Project:** SQE Coursework - Software Testing  
+**Project:** Tricentis DemoWebShop QA Suite  
 **Prepared By:** Lakindu De Silva  
 **Execution Date:** December 15, 2025  
 **Version:** 1.0

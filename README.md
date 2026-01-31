@@ -1,185 +1,124 @@
-# SQE Coursework - Demo Web Shop Testing
+# Tricentis DemoWebShop QA Suite
 
-## Project Overview
+<p>
+  <img src="https://img.shields.io/badge/Playwright-1.57-45ba4b?logo=playwright&logoColor=white" alt="Playwright">
+  <img src="https://img.shields.io/badge/Node.js-18+-339933?logo=node.js&logoColor=white" alt="Node.js">
+  <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black" alt="JavaScript">
+  <img src="https://img.shields.io/badge/Tests-30 Passing-success" alt="Tests">
+  <img src="https://img.shields.io/badge/Coverage-100%25-brightgreen" alt="Coverage">
+</p>
 
-**Student:** Lakindu De Silva  
-**Module:** Software Quality Engineering (SQE)  
-**Application Under Test:** https://demowebshop.tricentis.com/
-
----
-
-## 📁 Project Structure
-
-```
-SQE_CW/
-├── 📄 README.md                    # This file
-├── 📄 package.json                 # Node.js dependencies
-├── 📄 playwright.config.js         # Playwright configuration
-├── 📄 .gitignore                   # Git ignore rules
-│
-├── 📁 automation/                  # Automated test suite
-│   ├── 📁 pages/                   # Page Object Model classes
-│   │   ├── BasePage.js
-│   │   ├── RegisterPage.js
-│   │   ├── LoginPage.js
-│   │   ├── ProductPage.js
-│   │   ├── CartPage.js
-│   │   ├── CheckoutPage.js
-│   │   └── index.js
-│   ├── 📁 tests/                   # Test specifications
-│   │   ├── registration.spec.js    # AT-001: Registration tests (7)
-│   │   ├── login.spec.js           # AT-002: Login tests (9)
-│   │   ├── cart.spec.js            # AT-003: Cart tests (9)
-│   │   └── checkout.spec.js        # AT-004: Checkout tests (5)
-│   ├── 📁 test-data/               # Test data generators
-│   │   └── testData.js
-│   ├── 📁 reports/                 # HTML test reports
-│   └── 📁 test-results/            # Test execution artifacts
-│
-├── 📁 docs/                        # All documentation
-│   ├── 📁 test-artifacts/          # Core testing documents
-│   │   ├── 01-TESTING-REQUIREMENTS.md   # TR-001 to TR-008
-│   │   ├── 02-TEST-STRATEGY.md          # Testing approach
-│   │   ├── 03-TEST-PLAN.md              # Test schedule & scope
-│   │   └── REQUIREMENTS-TRACEABILITY-MATRIX.md
-│   │
-│   ├── 📁 test-cases/              # Manual test cases
-│   │   └── TEST-CASES-DOCUMENT.md  # 40 test cases (TC001-TC040)
-│   │
-│   ├── 📁 defects/                 # Defect tracking
-│   │   ├── DEFECT-REPORT.md        # DEF-001 to DEF-004
-│   │   └── 📁 evidence/            # Defect screenshots & videos
-│   │
-│   ├── 📁 exploratory-testing/     # Exploratory testing session
-│   │   └── EXPLORATORY-TEST-CHARTER.md
-│   │
-│   ├── 📁 screenshots/             # Test execution screenshots
-│   │   ├── 📁 functional/          # TC001-TC020
-│   │   ├── 📁 usability/           # TC021-TC026
-│   │   ├── 📁 ui-ux/               # TC027-TC032
-│   │   └── 📁 boundary-negative/   # TC033-TC040
-│   │
-│   └── 📁 reports/                 # Test reports
-│       ├── FINAL-TEST-REPORT.md    # Go/No-Go decision
-│       ├── AUTOMATED-TEST-EXECUTION-REPORT.md
-│       ├── MANUAL-TEST-EXECUTION-REPORT.md
-│       ├── TEST-COVERAGE-REPORT.md
-│       └── playwright-html-report/
-│
-├── 📁 .github/workflows/           # CI/CD pipeline
-│   └── playwright.yml
-│
-└── 📁 node_modules/                # Dependencies (auto-generated)
-```
+A comprehensive QA automation suite for [Tricentis DemoWebShop](https://demowebshop.tricentis.com/) featuring end-to-end test automation, manual test documentation, and complete test artifacts following industry-standard QA practices.
 
 ---
 
-## 🚀 Quick Start
+## Highlights
 
-### Prerequisites
+- **30 automated tests** using Playwright with Page Object Model
+- **40 manual test cases** with full execution documentation
+- **100% requirements coverage** across 8 testing requirements
+- **4 defects identified** with detailed evidence and severity classification
+- Complete test artifacts: Strategy, Plan, RTM, and Final Report
 
-- Node.js (v18 or higher)
-- npm
+---
 
-### Installation
+## Quick Start
 
-```powershell
+```bash
+# Install dependencies
 npm install
-```
 
-### Run All Automated Tests
-
-```powershell
+# Run all tests
 npx playwright test
-```
 
-### View Test Report
-
-```powershell
+# View HTML report
 npx playwright show-report
 ```
 
-### Run Specific Test Suite
+### Run Individual Suites
 
-```powershell
-# Registration tests
+```bash
 npx playwright test automation/tests/registration.spec.js
-
-# Login tests
 npx playwright test automation/tests/login.spec.js
-
-# Cart tests
 npx playwright test automation/tests/cart.spec.js
-
-# Checkout tests
 npx playwright test automation/tests/checkout.spec.js
 ```
 
 ---
 
-## 📊 Test Summary
+## Test Results
 
-| Category                 | Count | Status                     |
-| ------------------------ | ----- | -------------------------- |
-| **Manual Test Cases**    | 40    | ✅ 39 Pass, 1 Fail (97.5%) |
-| **Automated Tests**      | 30    | ✅ 100% Pass               |
-| **Combined Pass Rate**   | 70    | ✅ **98.6%**               |
-| **Requirements Covered** | 8/8   | ✅ 100%                    |
-| **Defects Found**        | 4     | ⚠️ 1 High, 3 Medium        |
-| **Release Decision**     | -     | ✅ **GO (Conditional)**    |
+| Metric               | Result               |
+| -------------------- | -------------------- |
+| Automated Tests      | 30/30 Pass (100%)    |
+| Manual Tests         | 39/40 Pass (97.5%)   |
+| Requirements Covered | 8/8 (100%)           |
+| Defects Found        | 4 (1 High, 3 Medium) |
+| **Release Decision** | **GO (Conditional)** |
 
-### Automated Test Breakdown
+<details>
+<summary><strong>Automated Test Breakdown</strong></summary>
 
-| Suite                 | Tests | Status  |
-| --------------------- | ----- | ------- |
-| AT-001: Registration  | 7     | ✅ Pass |
-| AT-002: Login         | 9     | ✅ Pass |
-| AT-003: Shopping Cart | 9     | ✅ Pass |
-| AT-004: Checkout      | 5     | ✅ Pass |
+| Suite         | Tests | Status  |
+| ------------- | ----- | ------- |
+| Registration  | 7     | ✅ Pass |
+| Login         | 9     | ✅ Pass |
+| Shopping Cart | 9     | ✅ Pass |
+| Checkout      | 5     | ✅ Pass |
 
-### Manual Test Breakdown
-
-| Category                        | Tests | Status                     |
-| ------------------------------- | ----- | -------------------------- |
-| Functional (TC001-TC020)        | 20    | ✅ 20/20 Pass              |
-| Usability (TC021-TC026)         | 6     | ✅ 6/6 Pass                |
-| UI/UX (TC027-TC032)             | 6     | ✅ 6/6 Pass                |
-| Boundary/Negative (TC033-TC040) | 8     | ⚠️ 7/8 Pass (TC034 failed) |
+</details>
 
 ---
 
-## 📋 Key Documents
+## Project Structure
 
-| Document                                                                         | Description                               |
-| -------------------------------------------------------------------------------- | ----------------------------------------- |
-| [Testing Requirements](docs/test-artifacts/01-TESTING-REQUIREMENTS.md)           | 8 testing requirements (TR-001 to TR-008) |
-| [Test Strategy](docs/test-artifacts/02-TEST-STRATEGY.md)                         | Testing approach and methodology          |
-| [Test Plan](docs/test-artifacts/03-TEST-PLAN.md)                                 | Scope, schedule, and resources            |
-| [Test Cases](docs/test-cases/TEST-CASES-DOCUMENT.md)                             | 40 manual test cases (executed)           |
-| [RTM](docs/test-artifacts/REQUIREMENTS-TRACEABILITY-MATRIX.md)                   | Requirements traceability matrix          |
-| [Coverage Report](docs/reports/TEST-COVERAGE-REPORT.md)                          | Test coverage analysis                    |
-| [Manual Execution Report](docs/reports/MANUAL-TEST-EXECUTION-REPORT.md)          | Manual test execution results             |
-| [Automation Report](docs/reports/AUTOMATED-TEST-EXECUTION-REPORT.md)             | Automated test results                    |
-| [Defect Report](docs/defects/DEFECT-REPORT.md)                                   | Defects logged (DEF-001 to DEF-004)       |
-| [Exploratory Test Charter](docs/exploratory-testing/EXPLORATORY-TEST-CHARTER.md) | Exploratory testing session documentation |
-| [**Final Report**](docs/reports/FINAL-TEST-REPORT.md)                            | **Go/No-Go decision & recommendations**   |
-
----
-
-## 🛠️ Technology Stack
-
-- **Test Framework:** Playwright v1.57.0
-- **Language:** JavaScript
-- **Pattern:** Page Object Model (POM)
-- **Browser:** Chromium
-- **Reporter:** HTML
+```
+├── automation/
+│   ├── pages/           # Page Object Model classes
+│   ├── tests/           # Playwright test specs
+│   ├── test-data/       # Test data generators
+│   └── reports/         # HTML test reports
+│
+├── docs/
+│   ├── test-planning/  # Strategy, Plan, RTM
+│   ├── test-cases/      # 40 manual test cases
+│   ├── defects/         # Defect reports with evidence
+│   ├── reports/         # Execution reports
+│   └── screenshots/     # Test execution evidence
+```
 
 ---
 
-## 👤 Team
+## Documentation
 
-**Lakindu De Silva** - Lead / Automation  
-**Chamath Madurasinghe** - Manual Testing (TC001-TC020)  
-**Senithi Mathangaweera** - Manual Testing (TC021-TC040)
+| Document                                                      | Description                      |
+| ------------------------------------------------------------- | -------------------------------- |
+| [Test Strategy](docs/test-planning/02-TEST-STRATEGY.md)       | Testing approach and methodology |
+| [Test Plan](docs/test-planning/03-TEST-PLAN.md)               | Scope, schedule, and resources   |
+| [Test Cases](docs/test-cases/TEST-CASES-DOCUMENT.md)          | 40 manual test cases             |
+| [RTM](docs/test-planning/REQUIREMENTS-TRACEABILITY-MATRIX.md) | Requirements traceability        |
+| [Defect Report](docs/defects/DEFECT-REPORT.md)                | Identified defects with evidence |
+| [Final Report](docs/reports/FINAL-TEST-REPORT.md)             | Go/No-Go decision                |
 
-SQE Coursework - December 2025
+---
+
+## Tech Stack
+
+| Component | Technology               |
+| --------- | ------------------------ |
+| Framework | Playwright               |
+| Language  | JavaScript (ES6+)        |
+| Pattern   | Page Object Model        |
+| Browser   | Chromium                 |
+| Reporting | Playwright HTML Reporter |
+
+---
+
+## Author
+
+**Lakindu De Silva** — Test architecture, automation framework, test design, and documentation.
+
+### Contributors
+
+- [Chamath Madurasinghe](https://github.com/ChamathMadurasinghe) — Manual test execution
+- [Senithi Mathangaweera](https://github.com/senithi-spec) — Manual test execution, exploratory testing

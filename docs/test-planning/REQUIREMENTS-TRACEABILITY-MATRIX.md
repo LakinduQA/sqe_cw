@@ -2,7 +2,7 @@
 
 ## Demo Web Shop - https://demowebshop.tricentis.com/
 
-**Project:** SQE Coursework - Software Testing  
+**Project:** Tricentis DemoWebShop QA Suite  
 **Prepared By:** Lakindu De Silva  
 **Date:** December 15, 2025  
 **Version:** 1.0
@@ -366,4 +366,4 @@ TR-008 (Form Validation):  █████████ 6 test cases
 
 ---
 
-_This RTM ensures complete traceability between requirements and test cases, supporting the SQE coursework objectives of comprehensive test coverage and documentation._
+_This RTM ensures complete traceability between requirements and test cases, supporting comprehensive test coverage and documentation._

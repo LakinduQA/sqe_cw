@@ -5,7 +5,7 @@
 **Document Version:** 1.0  
 **Prepared By:** Lakindu De Silva  
 **Date:** December 15, 2025  
-**Project:** Software Quality Engineering Coursework
+**Project:** Tricentis DemoWebShop QA Suite
 
 ---
 
@@ -310,10 +310,10 @@ All defects will be logged in the Defect Report document with:
 
 ## 13. Approval
 
-| Role         | Name             | Signature      | Date           |
-| ------------ | ---------------- | -------------- | -------------- |
-| QA Engineer  | Lakindu De Silva | ******\_****** | ******\_****** |
-| Project Lead | ******\_******   | ******\_****** | ******\_****** |
+| Role         | Name               | Signature          | Date               |
+| ------------ | ------------------ | ------------------ | ------------------ |
+| QA Engineer  | Lakindu De Silva   | **\*\***\_**\*\*** | **\*\***\_**\*\*** |
+| Project Lead | **\*\***\_**\*\*** | **\*\***\_**\*\*** | **\*\***\_**\*\*** |
 
 ---
 
